@@ -46,7 +46,7 @@ const handler = {
 		}
 
 		/* if target[prop].apply(target, args) returned something, return that value */
-		if (typeof ret_prop != "undefined")
+		if (typeof ret_prop !== "undefined")
 		    return ret_prop;
 		/* else return a promise resolved externally by callBack */
 		else
