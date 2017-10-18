@@ -1,3 +1,4 @@
+(() => {
 /*https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/events/Event*/
 const isEvent = e => {
     const methods = [
@@ -60,3 +61,4 @@ const handler = {
 
 if (typeof browser === "undefined" && typeof chrome !== "undefined")
     browser = new Proxy(chrome, handler);
+})()
