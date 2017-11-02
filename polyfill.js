@@ -59,6 +59,9 @@
 	}
     }
 
-    if (typeof browser === "undefined" && typeof chrome !== "undefined")
+    browser.isPolyfilled = false;
+    if (typeof browser === "undefined" && typeof chrome !== "undefined") {
 	browser = new Proxy(chrome, handler);
+	browser.isPolyfilled = true;
+    }
 })();
