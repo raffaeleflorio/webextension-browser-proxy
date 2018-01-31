@@ -8,7 +8,7 @@ You can download directly polyfill.js or you can clone this repo and check signa
 Then you have to include `polyfill.js` before any `browser` APIs are used.
 
 For background scripts or content_scripts add `polyfill.js` entry in `manifest.json`:
-```
+```javascript
 ...
 	"background": {
 		      "scripts": [
@@ -31,7 +31,7 @@ For background scripts or content_scripts add `polyfill.js` entry in `manifest.j
 ```
 
 For HTML files include it with `script` tag before any script that use `browser` API is used:
-```
+```html
 <!DOCTYPE html>
 	  ...
 		<script src="path/to/polyfill.js"></script>
