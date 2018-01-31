@@ -28,10 +28,10 @@
 			    return ret_promise;
 		    } catch (e) {
 			try {
-			    /* if target[prop] accepts no callbacks, return target[prop](args) */
+			    /* if target[prop] doesn't accept callback, return target[prop](args) */
 			    return target[prop].apply(target, args);
 			} catch (e) {
-			    /* if target[prop] accepts no args, return target[prop]() */
+			    /* if target[prop] doesn't accept parameter, return target[prop]() */
 			    return target[prop]();
 			}
 		    }
