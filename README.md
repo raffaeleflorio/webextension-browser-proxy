@@ -20,7 +20,7 @@ For background scripts or content_scripts add `polyfill.js` entry in `manifest.j
 	},
 
 	"content_scripts": [{
-			   ...
+			   // ...
 			   "js": [
 			   	 "path/to/polyfill.js",
 				 "content_script1.js",
