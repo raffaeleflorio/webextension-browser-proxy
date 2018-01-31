@@ -9,13 +9,13 @@ Then you have to include `polyfill.js` before any `browser` APIs are used.
 
 For background scripts or content_scripts add `polyfill.js` entry in `manifest.json`:
 ```javascript
-...
+// ...
 	"background": {
 		      "scripts": [
 		      		 "path/to/polyfill.js",
 				 "background_script1.js",
 				 "background_script2.js",
-				 ...
+				 // ...
 		      ]
 	},
 
@@ -25,17 +25,18 @@ For background scripts or content_scripts add `polyfill.js` entry in `manifest.j
 			   	 "path/to/polyfill.js",
 				 "content_script1.js",
 				 "content_script2.js",
-				 ...
+				 // ...
 			   ]
 	}]
+// ...
 ```
 
 For HTML files include it with `script` tag before any script that use `browser` API is used:
 ```html
 <!DOCTYPE html>
-	  ...
+	  <!-- ... -->
 		<script src="path/to/polyfill.js"></script>
-	  ...
+	  <!-- ... -->
 </html>
 ```
 
