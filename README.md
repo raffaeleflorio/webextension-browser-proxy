@@ -46,7 +46,7 @@ Then you can use Promise based API.
 
 # Where it has been tested
 
-It has been tested on Chrome/Chromium browser with these Promise bases extensions:
+It has been tested on Chrome/Chromium browser, with these Promise based extensions:
 
 * [qubes-url-redirector](https://github.com/raffaeleflorio/qubes-url-redirector)
 * [Mozilla WebExtension examples](https://github.com/mdn/webextensions-examples) (some extensions aren't compatible because of some Firefox specific APIs)
