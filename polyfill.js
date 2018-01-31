@@ -1,24 +1,7 @@
 (() => {
-    /*https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/events/Event*/
-    const isEvent = e => {
-	const methods = [
-	    "addListener",
-	    "removeListener",
-	    "hasListener",
-	    "hasListeners",
-	    "addRules",
-	    "getRules",
-	    "removeRules"
-	];
-
-	return methods.every(m => {
-	    return typeof e[m] === "function";
-	});
-    };
-
     const handler = {
 	get: (target, prop, receiver) => {
-	    if (typeof target[prop] === "object" && !isEvent(target[prop])) {
+	    if (typeof target[prop] === "object") {
 		return new Proxy(target[prop], handler);
 	    } else if (typeof target[prop] === "function") {
 		return (...args) => {
@@ -37,21 +20,21 @@
 			    promise.resolve(argsCallBack);
 		    }
 
-		    args.push(callBack);
-		    
 		    try {
-			ret_prop = target[prop].apply(target, args);
+			ret_prop = target[prop].apply(target, [...args, callBack]);
+			if (typeof ret_prop !== "undefined")
+			    return ret_prop;
+			else
+			    return ret_promise;
 		    } catch (e) {
-			/* if target[prop] accepts no args, return target[prop]() */
-			return target[prop]();
+			try {
+			    /* if target[prop] accepts no callbacks, return target[prop](args) */
+			    return target[prop].apply(target, args);
+			} catch (e) {
+			    /* if target[prop] accepts no args, return target[prop]() */
+			    return target[prop]();
+			}
 		    }
-
-		    /* if target[prop].apply(target, args) returned something, return that value */
-		    if (typeof ret_prop !== "undefined")
-			return ret_prop;
-		    /* else return a promise resolved externally by callBack */
-		    else
-			return ret_promise;
 		}
 	    } else {
 		return target[prop];
