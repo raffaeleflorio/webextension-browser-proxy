@@ -36,6 +36,8 @@ For HTML files include it with `script` tag before any script that use `browser`
 <!DOCTYPE html>
 	  <!-- ... -->
 		<script src="path/to/polyfill.js"></script>
+		<script src="other_script1.js"></script>
+		<script src="other_script2.js"></script>
 	  <!-- ... -->
 </html>
 ```
