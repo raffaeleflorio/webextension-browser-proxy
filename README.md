@@ -55,7 +55,7 @@ It has been tested on Chrome/Chromium browser, with these Promise based extensio
 
 [polyfill.js](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/master/polyfill.js) is an IIFE. It defines `browser` as `Proxy` of `chrome` ([[0]](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L46)). Furthermore it adds a `isPolyfilled` property to the `browser` object.
 The Proxy handles three cases when a `browser`'s property (or nested object's property) is accessed ([[1]](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L2)):
-1) If the property is an object, it returns a Proxy with `handler` ([[1]](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L2)) as handler.
+1) If the property is an object, it returns a Proxy with `handler` ([[4]](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L5)) as handler.
 2) If the property is a function, it returns a function ([[2]](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L7)) (read below).
 3) Otherwise it returns the target property.
 
@@ -69,3 +69,4 @@ The returned function try to calls the target function in this way:
 [1] = [polyfill.js#L2](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L2)<br>
 [2] = [polyfill.js#L7](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L7)<br>
 [3] = [polyfill.js#L14](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L14)<br>
+[4] = [polyfill.js#L14](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L5)<br>
