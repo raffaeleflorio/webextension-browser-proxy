@@ -41,6 +41,13 @@ For HTML files include it with `script` tag before any script that use `browser`
 
 Then you can use Promise based API.
 
+# Where it has been tested
+
+It has been tested on Chrome/Chromium browser.
+
+* [qubes-url-redirector](https://github.com/raffaeleflorio/qubes-url-redirector)
+* [Mozilla WebExtension examples](https://github.com/mdn/webextensions-examples) (some extensions aren't compatible because of some Firefox specific APIs)
+
 # How it works
 
 [polyfill.js](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/master/polyfill.js) is an IIFE. It defines `browser` as `Proxy` of `chrome` ([[0]](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L46)). Furthermore it adds a `isPolyfilled` property to the `browser` object.
