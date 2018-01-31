@@ -55,7 +55,7 @@ The returned function try to calls the target function in this way:
 1) If the target function accepts a callback, it returns a Promise resolved by [3].
 2) If the target function accepts (or not) some parameters, it returns the target function returned value.
 
-[0] = [polyfill.js#L46](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L46)
-[1] = [polyfill.js#L2](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L2)
-[2] = [polyfill.js#L7](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L7)
-[3] = [polyfill.js#L14](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L14)
+[0] = [polyfill.js#L46](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L46)<br>
+[1] = [polyfill.js#L2](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L2)<br>
+[2] = [polyfill.js#L7](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L7)<br>
+[3] = [polyfill.js#L14](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L14)<br>
