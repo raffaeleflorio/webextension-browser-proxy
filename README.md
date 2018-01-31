@@ -43,16 +43,16 @@ Then you can use Promise based API.
 
 # How it works
 
-[polyfill.js](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/master/polyfill.js) is an IIFE. It defines `browser` as `Proxy` of `chrome` ([0]). Furthermore it adds a `isPolyfilled` property to the `browser` object.
-The Proxy handles three cases when a `browser`'s property (or nested object's property) is accessed ([1]):
-1) If the property is an object, it returns a Proxy with `handler` ([1]) as handler.
-2) If the property is a function, it returns a function ([2]) (read below).
+[polyfill.js](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/master/polyfill.js) is an IIFE. It defines `browser` as `Proxy` of `chrome` ([[0]](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L46)). Furthermore it adds a `isPolyfilled` property to the `browser` object.
+The Proxy handles three cases when a `browser`'s property (or nested object's property) is accessed ([[1]](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L2)):
+1) If the property is an object, it returns a Proxy with `handler` ([[1]](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L2)) as handler.
+2) If the property is a function, it returns a function ([[2]](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L7)) (read below).
 3) Otherwise it returns the target property.
 
 ## How returned function works
 
 The returned function try to calls the target function in this way:
-1) If the target function accepts a callback, it returns a Promise resolved by [3].
+1) If the target function accepts a callback, it returns a Promise resolved by [[3]](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L14).
 2) If the target function accepts (or not) some parameters, it returns the target function returned value.
 
 [0] = [polyfill.js#L46](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L46)<br>
