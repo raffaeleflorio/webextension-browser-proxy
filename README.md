@@ -69,4 +69,4 @@ The returned function try to calls the target function in this way:
 [1] = [polyfill.js#L2](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L2)<br>
 [2] = [polyfill.js#L7](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L7)<br>
 [3] = [polyfill.js#L14](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L14)<br>
-[4] = [polyfill.js#L14](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L5)<br>
+[4] = [polyfill.js#L5](https://github.com/raffaeleflorio/webextension-browser-proxy/blob/833e2f77ac51f820203969aa9c645859fb958ec2/polyfill.js#L5)<br>
