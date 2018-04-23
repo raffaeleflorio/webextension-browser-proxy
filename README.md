@@ -1,5 +1,6 @@
 # webextension-browser-proxy
 
+
 webextension-browser-proxy allows extensions written with standardized (https://browserext.github.io/browserext/) Promise based WebExtension API to work without modification in Chrome/Chromium. The latter use a callback based API.
 
 # How to use
