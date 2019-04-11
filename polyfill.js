@@ -21,7 +21,7 @@
 		    }
 
 		    try {
-			ret_prop = target[prop].apply(target, [...args, callBack]);
+			let ret_prop = target[prop].apply(target, [...args, callBack]);
 			if (typeof ret_prop !== "undefined")
 			    return ret_prop;
 			else
